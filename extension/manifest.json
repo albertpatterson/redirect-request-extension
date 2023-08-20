@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "request interceptor",
+  "description": "Enable reading mode on Chrome's official Extensions and Chrome Web Store documentation.",
+  "version": "1.0",
+  "host_permissions": ["<all_urls>"],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["data.json", "script.js"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "permissions": ["declarativeNetRequest", "declarativeNetRequestFeedback"]
+}
